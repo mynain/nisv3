@@ -1,0 +1,58 @@
+@media screen and (min-width: 800px){
+            .pcbr{
+                  display: none;
+            }
+            section.contents{
+
+            }
+            //section.contents
+            .a-layer{
+                  &.ship{
+                        width: 150px;
+                        height: 150px;
+                        left: 30%;
+                        // margin-bottom: 0;
+                        >img{
+                              margin-bottom: -20px;
+                        }
+                  }
+                  //ship
+                  &.clouds{
+                        &.cloud-front{
+                              background-size: 500px;
+                        }
+                        &.cloud-dep{
+                              background-size: 500px;
+                        }
+                        &.cloud-back{
+                              background-size: 400px;
+                        }
+                  }
+                  &.moon-2{
+                        margin-top: 0;
+                  }
+                  &.photoWrap{
+                        .photos{
+                              float: right;
+                              width: 360px;
+                              // height: 600px;
+                              .inphoto{
+                                    // margin-top: 0;
+                                    // margin-left: 5px;
+                                    // margin-right: 5px;
+                              }
+                        }
+                  }
+                  h2{
+                        &.maintitle{
+                              left: 60px;
+                              font-size: 40px;
+                              bottom: 130px;
+                        }
+                  }
+                  .subtitle{
+                        font-size: 18px;
+                  }
+            }
+            //.a-layer
+}

@@ -1,0 +1,2172 @@
+@charset "UTF-8";
+#console {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  font-size: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #111;
+  z-index: 1000;
+  font-size: 14px;
+  padding: 10px;
+  display: none;
+}
+
+#positionDev {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  color: #000;
+  padding-top: 120px;
+  z-index: 110;
+}
+
+@-webkit-keyframes Balloon {
+  0% {
+    webkit-transform: translateY(0px);
+  }
+  100% {
+    webkit-transform: translateY(-50px);
+  }
+}
+
+@-moz-keyframes Balloon {
+  0% {
+    -moz-transform: translateY(0px);
+  }
+  100% {
+    -moz-transform: translateY(-50px);
+  }
+}
+
+@-o-keyframes Balloon {
+  0% {
+    -o-transform: translateY(0px);
+  }
+  100% {
+    -o-transform: translateY(-50px);
+  }
+}
+
+@keyframes Balloon {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+@-webkit-keyframes Twinkle {
+  0% {
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  100% {
+    -khtml-opacity: 0.7;
+    -moz-opacity: 0.7;
+    -ms-filter: alpha(opacity=70);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=70;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+  }
+}
+
+@-moz-keyframes Twinkle {
+  0% {
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  100% {
+    -khtml-opacity: 0.7;
+    -moz-opacity: 0.7;
+    -ms-filter: alpha(opacity=70);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=70;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+  }
+}
+
+@-o-keyframes Twinkle {
+  0% {
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  100% {
+    -khtml-opacity: 0.7;
+    -moz-opacity: 0.7;
+    -ms-filter: alpha(opacity=70);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=70;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+  }
+}
+
+@keyframes Twinkle {
+  0% {
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-filter: alpha(opacity=0);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  100% {
+    -khtml-opacity: 0.7;
+    -moz-opacity: 0.7;
+    -ms-filter: alpha(opacity=70);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=70;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+  }
+}
+
+@font-face {
+  font-family: FiraUL;
+  src: url("../font/FiraSans-UltraLight.eot");
+  src: local(Å), url("../font/FiraSans-UltraLight.woff2") format("woff2"), url("../font/FiraSans-UltraLight.eot?#iefix") format("embedded-opentype"), url("../font/FiraSans-UltraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: Q_L;
+  src: url("../font/Quicksand-Light.eot");
+  src: local(Å), url("../font/Quicksand-Light.woff2") format("woff2"), url("../font/Quicksand-Light.eot?#iefix") format("embedded-opentype"), url("../font/Quicksand-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: Q_R;
+  src: url("../font/Quicksand-Regular.eot");
+  src: local(Å), url("../font/Quicksand-Regular.woff2") format("woff2"), url("../font/Quicksand-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Quicksand-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: HYPE;
+  src: url("../font/HYPE.eot");
+  src: local(Å), url("../font/HYPE.woff2") format("woff2"), url("../font/HYPE.eot?#iefix") format("embedded-opentype"), url("../font/HYPE.woff") format("woff");
+}
+
+.pcbr {
+  display: block;
+}
+
+input:focus,
+button {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+html {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+body, div {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: FiraUL, 'Malgun Gothic',serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+body {
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #00020d;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+h1 {
+  display: none;
+}
+
+#app {
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+nav#mainnav {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+  z-index: 1000;
+}
+
+nav#mainnav.dark {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav#mainnav .btn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+nav#mainnav .btn .blackbar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -9px;
+  margin-top: -1px;
+  width: 18px;
+  height: 3px;
+  background-color: #f7f7b6;
+  overflow: hidden;
+}
+
+nav#mainnav .btn .blackbar.eq0 {
+  top: 40%;
+}
+
+nav#mainnav .btn .blackbar.eq1 {
+  top: 60%;
+}
+
+nav#mainnav .btn .blackbar > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  background-color: #e5306c;
+}
+
+section.forCloud {
+  position: relative;
+  height: 0;
+  background-color: #fff;
+  z-index: 15;
+  height: 100px;
+}
+
+section.contents {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+section.contents h2.sectiontitle {
+  position: relative;
+  z-index: 100;
+  top: 50px;
+  font-family: FiraUL;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #f7f7b6;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 1.5rem;
+  margin-right: -1.5rem;
+  line-height: 1;
+}
+
+section.contents h2.sectiontitle > .masktitle {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  color: #e5306c;
+  height: 0;
+  max-height: 100%;
+  overflow: hidden;
+  padding-left: 8px;
+  z-index: -1;
+}
+
+section.contents#intro {
+  z-index: 5;
+  background: #00020d;
+  background: -webkit-linear-gradient(#00020d, #000733);
+  background: -o-linear-gradient(#00020d, #000733);
+  background: -moz-linear-gradient(#00020d, #000733);
+  background: linear-gradient(#00020d, #000733);
+}
+
+section.contents#work {
+  z-index: 10;
+}
+
+section.contents#work h2.sectiontitle {
+  top: 100px;
+  -webkit-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -moz-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -ms-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -o-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+section.contents#work .forfixed {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+section.contents#work .forfixed.fixed {
+  position: fixed;
+}
+
+section.contents#work .forfixed.fixed h2.sectiontitle {
+  top: 50px;
+}
+
+section.contents#work .forfixed.fixed .clouds {
+  bottom: 0;
+  background-position: 0 100%;
+}
+
+section.contents#work .forfixed.fixed .clouds > .nextBg {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+section.contents#iam {
+  z-index: 15;
+  background: white;
+  background: -webkit-linear-gradient(white, #bdd2e7 20%, #151b33 100%);
+  background: -o-linear-gradient(white, #bdd2e7 20%, #151b33 100%);
+  background: -moz-linear-gradient(white, #bdd2e7 20%, #151b33 100%);
+  background: linear-gradient(white, #bdd2e7 20%, #151b33 100%);
+}
+
+section.contents#iam .sky3 {
+  -webkit-transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715) 0ms;
+  -moz-transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715) 0ms;
+  -ms-transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715) 0ms;
+  -o-transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715) 0ms;
+  transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715) 0ms;
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
+  -ms-filter: alpha(opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: #bdd2e7;
+}
+
+section.contents#iam .forfixed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+section.contents#iam .forfixed.fixed {
+  position: fixed;
+}
+
+section.contents#iam.step2 .sky3 {
+  -webkit-transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  background: #626a98;
+}
+
+section.contents#iam.step2 .forfixed.fixed .moon-3 {
+  -webkit-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -webkit-box-shadow: 0 0 50px 20px rgba(135, 143, 194, 0.5);
+  -moz-box-shadow: 0 0 50px 20px rgba(135, 143, 194, 0.5);
+  -ms-box-shadow: 0 0 50px 20px rgba(135, 143, 194, 0.5);
+  -o-box-shadow: 0 0 50px 20px rgba(135, 143, 194, 0.5);
+  box-shadow: 0 0 50px 20px rgba(135, 143, 194, 0.5);
+}
+
+section.contents#iam.step2 p.label {
+  color: #f1f1f1;
+}
+
+section.contents#iam.step2 p.content {
+  color: #f7f7b6;
+}
+
+section.contents#iam.step2 .overimg {
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+section.contents#iam.step3 .sky3 {
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  background: #c5c5e4;
+}
+
+section.contents#iam.step3 .forfixed.fixed .moon-3 {
+  -webkit-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -webkit-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.5);
+  -ms-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.5);
+  -o-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.5);
+}
+
+section.contents#iam.step4 .sky3 {
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  background: #2f3963;
+}
+
+section.contents#iam.step4 .forfixed.fixed .moon-3 {
+  -webkit-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -webkit-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.1);
+  -ms-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.1);
+  -o-box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.1);
+}
+
+section.contents#iam.step4 p.label {
+  color: #f1f1f1;
+}
+
+section.contents#iam.step4 p.content {
+  color: #f7f7b6;
+}
+
+section.contents#iam.step5 .sky3 {
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  background: #142a53;
+}
+
+section.contents#iam.step5 .forfixed.fixed .moon-3 {
+  -webkit-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -webkit-box-shadow: 0 0 50px 10px rgba(225, 154, 32, 0.2);
+  -moz-box-shadow: 0 0 50px 10px rgba(225, 154, 32, 0.2);
+  -ms-box-shadow: 0 0 50px 10px rgba(225, 154, 32, 0.2);
+  -o-box-shadow: 0 0 50px 10px rgba(225, 154, 32, 0.2);
+  box-shadow: 0 0 50px 10px rgba(225, 154, 32, 0.2);
+}
+
+section.contents#iam.step5 .forfixed.fixed .moon-3 > img.overhit {
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+section.contents#iam.step5 p.label {
+  color: #f1f1f1;
+}
+
+section.contents#iam.step5 p.content {
+  color: #f7f7b6;
+}
+
+section.contents#iam.step6 .sky3 {
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  background: #10152b;
+}
+
+section.contents#iam.step6 .forfixed .moon-3 {
+  -webkit-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: box-shadow 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -webkit-box-shadow: 0 0 80px 10px rgba(225, 154, 32, 0.3);
+  -moz-box-shadow: 0 0 80px 10px rgba(225, 154, 32, 0.3);
+  -ms-box-shadow: 0 0 80px 10px rgba(225, 154, 32, 0.3);
+  -o-box-shadow: 0 0 80px 10px rgba(225, 154, 32, 0.3);
+  box-shadow: 0 0 80px 10px rgba(225, 154, 32, 0.3);
+}
+
+section.contents#iam.step6 .forfixed .moon-3 > img.overhit {
+  -khtml-opacity: 1;
+  -moz-opacity: 1;
+  -ms-filter: alpha(opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=100;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+section.contents#iam h2.sectiontitle {
+  top: 100px;
+  color: #201975;
+  -webkit-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -moz-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -ms-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -o-transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  transition: top 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+section.contents#iam.mid h2.sectiontitle {
+  color: #f7f7b6;
+}
+
+section.contents#contact {
+  background-color: #10152b;
+  z-index: 15;
+  color: #fff;
+}
+
+.a-layer {
+  position: absolute;
+  /** intro **/
+  /** work **/
+  /** iam **/
+}
+
+.a-layer.information {
+  position: relative;
+  top: 600px;
+}
+
+.a-layer.information > p {
+  padding: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.a-layer.information > p.label {
+  font-family: Q_R;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.a-layer.information > p.content {
+  font-family: FiraUL;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #222;
+  margin-bottom: 50px;
+}
+
+.a-layer.information > p.content.name {
+  font-size: 30px;
+  margin-bottom: 230px;
+}
+
+.a-layer.snowbg {
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  -webkit-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -moz-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -ms-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -o-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.a-layer.snowbg > img {
+  display: block;
+  top: 0;
+  width: 100%;
+}
+
+.a-layer.moon-1 {
+  top: 20%;
+  left: 100%;
+  margin-left: -30%;
+  width: 30%;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.a-layer.moon-1 > img {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 150px 10px rgba(225, 154, 32, 0.5);
+  -moz-box-shadow: 0 0 150px 10px rgba(225, 154, 32, 0.5);
+  -ms-box-shadow: 0 0 150px 10px rgba(225, 154, 32, 0.5);
+  -o-box-shadow: 0 0 150px 10px rgba(225, 154, 32, 0.5);
+  box-shadow: 0 0 150px 10px rgba(225, 154, 32, 0.5);
+  display: block;
+  margin-left: -50%;
+  width: 100%;
+}
+
+.a-layer.stars {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.a-layer .star {
+  position: absolute;
+  background: #fff;
+}
+
+.a-layer .star.particle-0 {
+  left: 57%;
+  top: 42%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-1 {
+  left: 44%;
+  top: 21%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+  -webkit-animation: Twinkle 3.1s 10.5s infinite alternate;
+  -moz-animation: Twinkle 3.1s 10.5s infinite alternate;
+  -o-animation: Twinkle 3.1s 10.5s infinite alternate;
+  animation: Twinkle 3.1s 10.5s infinite alternate;
+}
+
+.a-layer .star.particle-2 {
+  left: 75%;
+  top: 26%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-3 {
+  left: 45%;
+  top: 18%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-4 {
+  left: 63%;
+  top: 39%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-5 {
+  left: 43%;
+  top: 9%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-6 {
+  left: 22%;
+  top: 29%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-7 {
+  left: 48%;
+  top: 17%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+  -webkit-animation: Twinkle 2.7s 8.5s infinite alternate;
+  -moz-animation: Twinkle 2.7s 8.5s infinite alternate;
+  -o-animation: Twinkle 2.7s 8.5s infinite alternate;
+  animation: Twinkle 2.7s 8.5s infinite alternate;
+}
+
+.a-layer .star.particle-8 {
+  left: 48%;
+  top: 28%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-9 {
+  left: 78%;
+  top: 37%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-10 {
+  left: 42%;
+  top: 28%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-11 {
+  left: 63%;
+  top: 47%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-12 {
+  left: 75%;
+  top: 53%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-13 {
+  left: 30%;
+  top: 11%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-14 {
+  left: 92%;
+  top: 12%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-15 {
+  left: 41%;
+  top: 36%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-16 {
+  left: 34%;
+  top: 26%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-17 {
+  left: 46%;
+  top: 43%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-18 {
+  left: 8%;
+  top: 60%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-19 {
+  left: 87%;
+  top: 2%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+  -webkit-animation: Twinkle 1.2s 1s infinite alternate;
+  -moz-animation: Twinkle 1.2s 1s infinite alternate;
+  -o-animation: Twinkle 1.2s 1s infinite alternate;
+  animation: Twinkle 1.2s 1s infinite alternate;
+}
+
+.a-layer .star.particle-20 {
+  left: 6%;
+  top: 24%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+  -webkit-animation: Twinkle 3.4s 12s infinite alternate;
+  -moz-animation: Twinkle 3.4s 12s infinite alternate;
+  -o-animation: Twinkle 3.4s 12s infinite alternate;
+  animation: Twinkle 3.4s 12s infinite alternate;
+}
+
+.a-layer .star.particle-21 {
+  left: 11%;
+  top: 55%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-22 {
+  left: 25%;
+  top: 19%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-23 {
+  left: 3%;
+  top: 11%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+  -webkit-animation: Twinkle 2.1s 5.5s infinite alternate;
+  -moz-animation: Twinkle 2.1s 5.5s infinite alternate;
+  -o-animation: Twinkle 2.1s 5.5s infinite alternate;
+  animation: Twinkle 2.1s 5.5s infinite alternate;
+}
+
+.a-layer .star.particle-24 {
+  left: 4%;
+  top: 34%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-25 {
+  left: 69%;
+  top: 37%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-26 {
+  left: 100%;
+  top: 53%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-27 {
+  left: 43%;
+  top: 19%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-28 {
+  left: 87%;
+  top: 56%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-29 {
+  left: 48%;
+  top: 56%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+  -webkit-animation: Twinkle 6.6s 28s infinite alternate;
+  -moz-animation: Twinkle 6.6s 28s infinite alternate;
+  -o-animation: Twinkle 6.6s 28s infinite alternate;
+  animation: Twinkle 6.6s 28s infinite alternate;
+}
+
+.a-layer .star.particle-30 {
+  left: 9%;
+  top: 12%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-31 {
+  left: 79%;
+  top: 9%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+  -webkit-animation: Twinkle 1.9s 4.5s infinite alternate;
+  -moz-animation: Twinkle 1.9s 4.5s infinite alternate;
+  -o-animation: Twinkle 1.9s 4.5s infinite alternate;
+  animation: Twinkle 1.9s 4.5s infinite alternate;
+}
+
+.a-layer .star.particle-32 {
+  left: 25%;
+  top: 11%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-33 {
+  left: 78%;
+  top: 40%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-34 {
+  left: 50%;
+  top: 60%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-35 {
+  left: 8%;
+  top: 57%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-36 {
+  left: 91%;
+  top: 38%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-37 {
+  left: 38%;
+  top: 24%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+  -webkit-animation: Twinkle 3.4s 12s infinite alternate;
+  -moz-animation: Twinkle 3.4s 12s infinite alternate;
+  -o-animation: Twinkle 3.4s 12s infinite alternate;
+  animation: Twinkle 3.4s 12s infinite alternate;
+}
+
+.a-layer .star.particle-38 {
+  left: 51%;
+  top: 29%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-39 {
+  left: 38%;
+  top: 54%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-40 {
+  left: 95%;
+  top: 51%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-41 {
+  left: 3%;
+  top: 59%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-42 {
+  left: 90%;
+  top: 6%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: alpha(opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=40;
+  filter: alpha(opacity=40);
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-43 {
+  left: 61%;
+  top: 4%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+  -webkit-animation: Twinkle 1.4s 2s infinite alternate;
+  -moz-animation: Twinkle 1.4s 2s infinite alternate;
+  -o-animation: Twinkle 1.4s 2s infinite alternate;
+  animation: Twinkle 1.4s 2s infinite alternate;
+}
+
+.a-layer .star.particle-44 {
+  left: 81%;
+  top: 35%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-45 {
+  left: 89%;
+  top: 15%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+  -webkit-animation: Twinkle 2.5s 7.5s infinite alternate;
+  -moz-animation: Twinkle 2.5s 7.5s infinite alternate;
+  -o-animation: Twinkle 2.5s 7.5s infinite alternate;
+  animation: Twinkle 2.5s 7.5s infinite alternate;
+}
+
+.a-layer .star.particle-46 {
+  left: 63%;
+  top: 7%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-47 {
+  left: 14%;
+  top: 28%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -ms-filter: alpha(opacity=50);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=50;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-48 {
+  left: 73%;
+  top: 47%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.1;
+  -moz-opacity: 0.1;
+  -ms-filter: alpha(opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=10;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  overflow: hidden;
+}
+
+.a-layer .star.particle-49 {
+  left: 85%;
+  top: 55%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -ms-filter: alpha(opacity=20);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=20;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  overflow: hidden;
+  -webkit-animation: Twinkle 6.5s 27.5s infinite alternate;
+  -moz-animation: Twinkle 6.5s 27.5s infinite alternate;
+  -o-animation: Twinkle 6.5s 27.5s infinite alternate;
+  animation: Twinkle 6.5s 27.5s infinite alternate;
+}
+
+.a-layer .star.particle-50 {
+  left: 23%;
+  top: 59%;
+  width: 2px;
+  height: 2px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  -khtml-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: alpha(opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=30;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+  -webkit-animation: Twinkle 6.9s 29.5s infinite alternate;
+  -moz-animation: Twinkle 6.9s 29.5s infinite alternate;
+  -o-animation: Twinkle 6.9s 29.5s infinite alternate;
+  animation: Twinkle 6.9s 29.5s infinite alternate;
+}
+
+.a-layer.sky {
+  right: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 226, 255, 0.18);
+  background: -webkit-linear-gradient(left top, rgba(198, 40, 99, 0.2), rgba(68, 226, 255, 0.1) 50%, rgba(68, 226, 255, 0.18) 90%);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, rgba(198, 40, 99, 0.2), rgba(68, 226, 255, 0.1) 50%, rgba(68, 226, 255, 0.18) 90%);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, rgba(198, 40, 99, 0.2), rgba(68, 226, 255, 0.1) 50%, rgba(68, 226, 255, 0.18) 90%);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, rgba(198, 40, 99, 0.2), rgba(68, 226, 255, 0.1) 50%, rgba(68, 226, 255, 0.18) 90%);
+  /* Standard syntax */
+}
+
+.a-layer.wave {
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100px;
+}
+
+.a-layer.wave > canvas {
+  height: 100px;
+  width: 100%;
+}
+
+.a-layer.wave > .nextBg {
+  position: absolute;
+  top: -1px;
+  margin-top: 100px;
+  width: 100%;
+  height: 100vh;
+  background-color: #06004d;
+}
+
+.a-layer.ship {
+  width: 80px;
+  height: 80px;
+  left: 20%;
+  bottom: 0;
+}
+
+.a-layer.ship > img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0px;
+  -ms-transform-origin: 80% 90%;
+  -webkit-transform-origin: 80% 90%;
+  transform-origin: 80% 90%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.a-layer.moon-2 {
+  position: relative;
+  margin-top: 15%;
+  left: 20%;
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition: 1.0s;
+  transition: 1.0s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  width: 50%;
+  min-width: 400px;
+  max-width: 600px;
+}
+
+@media only screen and (orientation: landscape) {
+  .a-layer.moon-2 {
+    margin-top: 0;
+    min-width: 300px;
+  }
+}
+
+.a-layer.moon-2 .moon-2Wrap {
+  width: 100%;
+}
+
+.a-layer.moon-2 .moon-2Wrap > img {
+  display: block;
+  margin-left: -50%;
+  width: 100%;
+}
+
+.a-layer.moon-2 .moon-2Wrap > .moon-hit {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 54%;
+  width: 37.5%;
+}
+
+.a-layer.moon-2 .moon-2Wrap > .moon-hit > img {
+  margin-left: -50%;
+  margin-top: -50%;
+  width: 100%;
+}
+
+.a-layer.moon-2 .moon-2Wrap > #flame {
+  position: absolute;
+  left: 0;
+  top: 65%;
+  width: 8%;
+  height: 8%;
+  margin-left: -4%;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  z-index: -1;
+}
+
+.a-layer.sky2 {
+  left: 0;
+  top: 0%;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(242, 105, 49, 0.4);
+  background: -webkit-radial-gradient(50% 110%, circle, rgba(242, 105, 49, 0.4) 20%, rgba(105, 116, 205, 0) 70%);
+  background: -o-radial-gradient(50% 110%, circle, rgba(242, 105, 49, 0.4) 20%, rgba(105, 116, 205, 0) 70%);
+  background: -moz-radial-gradient(50% 110%, circle, rgba(242, 105, 49, 0.4) 20%, rgba(105, 116, 205, 0) 70%);
+  background: radial-gradient(circle at 50% 110%, rgba(242, 105, 49, 0.4) 20%, rgba(105, 116, 205, 0) 70%);
+}
+
+.a-layer.clouds {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  -webkit-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -moz-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -ms-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -o-transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  transition: bottom 1000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  background-position: 0 200%;
+}
+
+.a-layer.clouds.cloud-front {
+  height: 128px;
+  bottom: -128px;
+  background-image: url("../images/cloud-front.png");
+  background-repeat: repeat-x;
+  background-size: 400px;
+}
+
+.a-layer.clouds.cloud-back {
+  bottom: -1000px;
+  height: 178px;
+  bottom: -178px;
+  background-image: url("../images/cloud-back.png");
+  background-repeat: repeat-x;
+  background-size: 350px;
+}
+
+.a-layer.clouds.cloud-dep {
+  position: absolute;
+  top: -128px;
+  height: 128px;
+  background-image: url("../images/cloud-front.png");
+  background-repeat: repeat-x;
+  background-size: 400px;
+}
+
+.a-layer.bg {
+  left: 0;
+  top: 0%;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: #06004d;
+  background: -webkit-linear-gradient(#06004d, #5d53d0 80%, #b29bd6);
+  background: -o-linear-gradient(#06004d, #5d53d0 80%, #b29bd6);
+  background: -moz-linear-gradient(#06004d, #5d53d0 80%, #b29bd6);
+  background: linear-gradient(#06004d, #5d53d0 80%, #b29bd6);
+}
+
+.a-layer.sky3 {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.a-layer.moon-3 {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 10%;
+  min-width: 100px;
+  max-width: 400px;
+  overflow: hidden;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 50px 10px rgba(205, 227, 251, 0.5);
+  -moz-box-shadow: 0 0 50px 10px rgba(205, 227, 251, 0.5);
+  -ms-box-shadow: 0 0 50px 10px rgba(205, 227, 251, 0.5);
+  -o-box-shadow: 0 0 50px 10px rgba(205, 227, 251, 0.5);
+  box-shadow: 0 0 50px 10px rgba(205, 227, 251, 0.5);
+}
+
+.a-layer.moon-3 > img {
+  display: block;
+  width: 100%;
+  padding: 1px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.a-layer.moon-3 > img.overhit {
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
+  -ms-filter: alpha(opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: all 2000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -moz-transition: all 2000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -ms-transition: all 2000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  -o-transition: all 2000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  transition: all 2000ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  z-index: 4;
+}
+
+.a-layer.moon-3 > img.grey {
+  position: absolute;
+  z-index: 5;
+  -webkit-clip-path: circle(70% at 200% 40%);
+  clip-path: circle(70% at 200% 40%);
+}
+
+.a-layer.photoWrap {
+  max-width: 800px;
+  width: 90%;
+  top: 1600px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.a-layer.photoWrap .overimg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
+  -ms-filter: alpha(opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha Opacity=0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -moz-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -ms-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  -o-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+  transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0ms;
+}
+
+.a-layer.photoWrap .photos {
+  width: 200px;
+  float: none;
+}
+
+.a-layer.photoWrap .photos .inphoto {
+  position: relative;
+}
+
+.a-layer.photoWrap .photos .inphoto img {
+  width: 100%;
+}
+
+.a-layer h2 {
+  position: absolute;
+}
+
+.a-layer h2.maintitle {
+  left: 20px;
+  width: 100%;
+  font-family: Q_L, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  bottom: 100px;
+  color: #dca028;
+}
+
+.a-layer h2.maintitle.over {
+  display: none;
+  letter-spacing: 13.9px;
+  clip-path: polygon(0 50%, 400px 50%, 400px 100%, 0px 100%);
+  color: rgba(247, 247, 182, 0.3);
+  z-index: 2;
+  border: 0;
+}
+
+.a-layer .subtitle {
+  display: block;
+  position: absolute;
+  top: 100%;
+  text-transform: uppercase;
+  font-family: Q_R;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 6px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 800px) {
+  .pcbr {
+    display: none;
+  }
+  .a-layer.ship {
+    width: 150px;
+    height: 150px;
+    left: 30%;
+  }
+  .a-layer.ship > img {
+    margin-bottom: -20px;
+  }
+  .a-layer.clouds.cloud-front {
+    background-size: 500px;
+  }
+  .a-layer.clouds.cloud-dep {
+    background-size: 500px;
+  }
+  .a-layer.clouds.cloud-back {
+    background-size: 400px;
+  }
+  .a-layer.moon-2 {
+    margin-top: 0;
+  }
+  .a-layer.photoWrap .photos {
+    float: right;
+    width: 360px;
+  }
+  .a-layer h2.maintitle {
+    left: 60px;
+    font-size: 40px;
+    bottom: 130px;
+  }
+  .a-layer .subtitle {
+    font-size: 18px;
+  }
+}
+
+.depth-1 {
+  z-index: 10;
+}
+
+.depth-2 {
+  z-index: 20;
+}
+
+.depth-3 {
+  z-index: 30;
+}
+
+.depth-4 {
+  z-index: 40;
+}
+
+.depth-5 {
+  z-index: 50;
+}
+
+.depth-6 {
+  z-index: 60;
+}
+
+.depth-7 {
+  z-index: 70;
+}
+
+.depth-8 {
+  z-index: 80;
+}
+
+.depth-9 {
+  z-index: 90;
+}
+
+.depth-10 {
+  z-index: 100;
+}
+
+.depth-11 {
+  z-index: 110;
+}
+
+.depth-12 {
+  z-index: 120;
+}
+
+.depth-13 {
+  z-index: 130;
+}
+
+.depth-14 {
+  z-index: 140;
+}
+
+.depth-15 {
+  z-index: 150;
+}

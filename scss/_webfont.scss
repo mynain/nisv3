@@ -1,0 +1,232 @@
+@font-face {
+      font-family: FiraUL;
+      src : url("../font/FiraSans-UltraLight.eot");
+      src : local(Å),
+            url('../font/FiraSans-UltraLight.woff2') format('woff2'),
+            url("../font/FiraSans-UltraLight.eot?#iefix") format("embedded-opentype"),
+            url("../font/FiraSans-UltraLight.woff") format("woff");
+}
+@font-face {
+      font-family: Q_L;
+      src : url("../font/Quicksand-Light.eot");
+      src : local(Å),
+            url('../font/Quicksand-Light.woff2') format('woff2'),
+            url("../font/Quicksand-Light.eot?#iefix") format("embedded-opentype"),
+            url("../font/Quicksand-Light.woff") format("woff");
+}
+@font-face {
+      font-family: Q_R;
+      src : url("../font/Quicksand-Regular.eot");
+      src : local(Å),
+            url('../font/Quicksand-Regular.woff2') format('woff2'),
+            url("../font/Quicksand-Regular.eot?#iefix") format("embedded-opentype"),
+            url("../font/Quicksand-Regular.woff") format("woff");
+}
+@font-face {
+      font-family: HYPE;
+      src : url("../font/HYPE.eot");
+      src : local(Å),
+            url("../font/HYPE.woff2") format("woff2"),
+            url("../font/HYPE.eot?#iefix") format("embedded-opentype"),
+            url("../font/HYPE.woff") format("woff");
+}
+// @font-face {
+//       font-family: Q_B;
+//       src : url("../font/Quicksand-Bold.eot");
+//       src : local(Å),
+//             url('../font/Quicksand-Bold.woff2') format('woff2'),
+//             url("../font/Quicksand-Bold.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Quicksand-Bold.woff") format("woff");
+// }
+// @font-face {
+//       font-family: JosefinR;
+//       src : url("../font/JosefinSans-Regular.eot");
+//       src : local(Å),
+//             url('../font/JosefinSans-Regular.woff2') format('woff2'),
+//             url("../font/JosefinSans-Regular.eot?#iefix") format("embedded-opentype"),
+//             url("../font/JosefinSans-Regular.woff") format("woff");
+// }
+// @font-face {
+//       font-family: JosefinL;
+//       src : url("../font/JosefinSans-Light.eot");
+//       src : local(Å),
+//             url('../font/JosefinSans-Light.woff2') format('woff2'),
+//             url("../font/JosefinSans-Light.eot?#iefix") format("embedded-opentype"),
+//             url("../font/JosefinSans-Light.woff") format("woff");
+// }
+// @font-face {
+//       font-family: JosefinB;
+//       src : url("../font/JosefinSans-SemiBold.eot");
+//       src : local(Å),
+//             url('../font/JosefinSans-SemiBold.woff2') format('woff2'),
+//             url("../font/JosefinSans-SemiBold.eot?#iefix") format("embedded-opentype"),
+//             url("../font/JosefinSans-SemiBold.woff") format("woff");
+// }
+// @font-face {
+//       font-family: raleway;
+//       src : url("../font/raleway_thin-webfont.eot");
+//       src : local(Å),
+//             url("../font/raleway_thin-webfont.eot?#iefix") format("embedded-opentype"),
+//             url("../font/raleway_thin-webfont.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Casual;
+//       src : url("../font/Casual-Regular.eot");
+//       src : local(Å),
+//             url('../font/Casual-Regular.woff2') format('woff2'),
+//             url("../font/Casual-Regular.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Casual-Regular.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Moon;
+//       src : url("../font/Moon-Light.eot");
+//       src : local(Å),
+//             url('../font/Moon-Light.woff2') format('woff2'),
+//             url("../font/Moon-Light.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Moon-Light.woff") format("woff");
+// }
+// @font-face {
+//       font-family: HKNova;
+//       src : url("../font/HKNova-MediumR.eot");
+//       src : local(Å),
+//             url('../font/HKNova-MediumR.woff2') format('woff2'),
+//             url("../font/HKNova-MediumR.eot?#iefix") format("embedded-opentype"),
+//             url("../font/HKNova-MediumR.woff") format("woff");
+// }
+// @font-face {
+//       font-family: HelloA;
+//       src : url("../font/HelloStockholm-Alt.eot");
+//       src : local(Å),
+//             url('../font/HelloStockholm-Alt.woff2') format('woff2'),
+//             url("../font/HelloStockholm-Alt.eot?#iefix") format("embedded-opentype"),
+//             url("../font/HelloStockholm-Alt.woff") format("woff");
+// }
+// @font-face {
+//       font-family: HelloR;
+//       src : url("../font/HelloStockholm-Regular.eot");
+//       src : local(Å),
+//             url('../font/HelloStockholm-Regular.woff2') format('woff2'),
+//             url("../font/HelloStockholm-Regular.eot?#iefix") format("embedded-opentype"),
+//             url("../font/HelloStockholm-Regular.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Peace;
+//       src : url("../font/Peace.eot");
+//       src : local(Å),
+//             url('../font/Peace.woff2') format('woff2'),
+//             url("../font/Peace.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Peace.woff") format("woff");
+// }
+// @font-face {
+//       font-family: ButlerSM;
+//       src : url("../font/ButlerStencil-Medium.eot");
+//       src : local(Å),
+//             url('../font/ButlerStencil-Medium.woff2') format('woff2'),
+//             url("../font/ButlerStencil-Medium.eot?#iefix") format("embedded-opentype"),
+//             url("../font/ButlerStencil-Medium.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Novar;
+//       src : url("../font/Novar.eot");
+//       src : local(Å),
+//             url('../font/Novar.woff2') format('woff2'),
+//             url("../font/Novar.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Novar.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Butler;
+//       src : url("../font/Butler-UltraLight.eot");
+//       src : local(Å),
+//             url('../font/Butler-UltraLight.woff2') format('woff2'),
+//             url("../font/Butler-UltraLight.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Butler-UltraLight.woff") format("woff");
+// }
+// @font-face {
+//       font-family: ButlerEB;
+//       src : url("../font/Butler-ExtraBold.eot");
+//       src : local(Å),
+//             url('../font/Butler-ExtraBold.woff2') format('woff2'),
+//             url("../font/Butler-ExtraBold.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Butler-ExtraBold.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Rosa;
+//       src : url("../font/rosarina.eot");
+//       src : local(Å),
+//             url('../font/rosarina.woff2') format('woff2'),
+//             url("../font/rosarina.eot?#iefix") format("embedded-opentype"),
+//             url("../font/rosarina.woff") format("woff");
+// }
+// @font-face {
+//       font-family: FiraSB;
+//       src : url("../font/FiraSans-SemiBold.eot");
+//       src : local(Å),
+//             url('../font/FiraSans-SemiBold.woff2') format('woff2'),
+//             url("../font/FiraSans-SemiBold.eot?#iefix") format("embedded-opentype"),
+//             url("../font/FiraSans-SemiBold.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Womby;
+//       src : url("../font/Womby-Regular.eot");
+//       src : local(Å),
+//             url("../font/Womby-Regular.woff2") format("woff2"),
+//             url("../font/Womby-Regular.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Womby-Regular.woff") format("woff");
+// }
+// @font-face {
+//       font-family: Aby;
+//       src : url("../font/Abyssopelagic.eot");
+//       src : local(Å),
+//             url("../font/Abyssopelagic.woff2") format("woff2"),
+//             url("../font/Abyssopelagic.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Abyssopelagic.woff") format("woff");
+// }
+// @font-face {
+//       font-family: CovesB;
+//       src : url("../font/Coves-Bold.eot");
+//       src : local(Å),
+//             url("../font/Coves-Bold.woff2") format("woff2"),
+//             url("../font/Coves-Bold.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Coves-Bold.woff") format("woff");
+// }
+// @font-face {
+//       font-family: CovesL;
+//       src : url("../font/Coves-Light.eot");
+//       src : local(Å),
+//             url("../font/Coves-Light.woff2") format("woff2"),
+//             url("../font/Coves-Light.eot?#iefix") format("embedded-opentype"),
+//             url("../font/Coves-Light.woff") format("woff");
+// }
+
+// @font-face {
+//       font-family: NS_B;
+//       src : url("../font/NanumSquareB.eot");
+//       src : local(Å),
+//             url("../font/NanumSquareB.woff2") format("woff2"),
+//             url("../font/NanumSquareB.eot?#iefix") format("embedded-opentype"),
+//             url("../font/NanumSquareB.woff") format("woff");
+// }
+// @font-face {
+//       font-family: NS_EB;
+//       src : url("../font/NanumSquareEB.eot");
+//       src : local(Å),
+//             url("../font/NanumSquareEB.woff2") format("woff2"),
+//             url("../font/NanumSquareEB.eot?#iefix") format("embedded-opentype"),
+//             url("../font/NanumSquareEB.woff") format("woff");
+// }
+// @font-face {
+//       font-family: NS_L;
+//       src : url("../font/NanumSquareL.eot");
+//       src : local(Å),
+//             url("../font/NanumSquareL.woff2") format("woff2"),
+//             url("../font/NanumSquareL.eot?#iefix") format("embedded-opentype"),
+//             url("../font/NanumSquareL.woff") format("woff");
+// }
+// @font-face {
+//       font-family: NS_R;
+//       src : url("../font/NanumSquareR.eot");
+//       src : local(Å),
+//             url("../font/NanumSquareR.woff2") format("woff2"),
+//             url("../font/NanumSquareR.eot?#iefix") format("embedded-opentype"),
+//             url("../font/NanumSquareR.woff") format("woff");
+// }

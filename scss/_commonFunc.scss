@@ -1,0 +1,364 @@
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                        common
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+$multyOrhalf : 2;
+$half_per : 50%;
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                        transition & easing
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//사용방법
+//@include transition네임(transition target,transition시간+ms, easing네임, 딜레이시간+ms);
+//ex) @include transition(all, 1000ms, $easeInOutSine, 0ms);
+
+
+//Sine
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+//Quad
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+//Cubic
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+//Quart
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+//Quint
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+//Expo
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo:cubic-bezier(1, 0, 0, 1);
+//Circ
+$easeInCirc:cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc:cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc:cubic-bezier(0.785, 0.135, 0.15, 0.86);
+//Back
+$easeInBack:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack:cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+@mixin transition($target, $time, $eas, $delay:0ms){
+    -webkit-transition: $target $time $eas $delay;
+    -moz-transition: $target $time $eas $delay;
+    -ms-transition: $target $time $eas $delay;
+    -o-transition: $target $time $eas $delay;
+    transition: $target $time $eas $delay;
+}
+
+@mixin transition_none(){
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                            border-radius
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+@mixin border-radius($val:10px){ //custom border-radius
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    -o-border-radius: $val;
+    border-radius: $val;
+}
+@mixin border-radius-circle($val:50%){ //원
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    -o-border-radius: $val;
+    border-radius: $val;
+}
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              box-shadow
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+//사용방법
+//box-shadow(수평축, 수직축, blur, spread, color, 그림자위치);
+//ex) @include box-shadow(10px, 10px, 10px, 0px, #aaa); <== 바깥 그림자
+//ex) @include box-shadow(10px, 10px, 10px, 0px, #aaa, inset); <== 안쪽 그림자
+
+
+@mixin box-shadow($val_X, $val_Y, $val_B, $val_S, $color, $val_P:outset){
+    -webkit-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    -moz-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    -ms-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    -o-box-shadow: $val_X $val_Y $val_B $val_S $color;
+    box-shadow: $val_X $val_Y $val_B $val_S $color;
+
+    @if $val_P == 'inset' {
+        -webkit-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        -moz-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        -ms-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        -o-box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+        box-shadow: $val_X $val_Y $val_B $val_S $color $val_P;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                            transform
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+@mixin rotate($val:90deg){
+    -webkit-transform:rotate($val);
+    -moz-transform:rotate($val);
+    -ms-transform:rotate($val);
+    -o-transform:rotate($val);
+    transform:rotate($val);
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              opacity
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+@mixin opacity($val:1){
+    -khtml-opacity: $val;  // old safari
+    -moz-opacity: $val;  // old firefox
+    -ms-filter: alpha(opacity=$val*100);  // new ie
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=$val*100);  // new ie
+    filter: alpha(opacity=$val*100);  // old ie
+    opacity: $val;  // modern gecko and webkit
+}
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              inline-block
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+@mixin inline-block(){
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              font-face
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+@mixin fontface($name, $src){
+    //사용시 basic.sass 안에 하단내용 추가
+//    $name: 'ng_bold' 'td' //사용할 폰트 네임
+//    $src: 'font/NanumGothic-Bold' 'font/ToyotaDisplay_Rg' //추가할 폰트 url
+//    @include fontface($name, $src);
+
+//    여러가지 폰트 사용시
+//    @include fontface('ng_bold' 'td', 'font/NanumGothic-Bold' 'font/ToyotaDisplay_Rg');
+
+    @each $font-face in $src{
+        $i: index($src, $font-face);
+
+        @font-face {
+            font-family: nth($name, $i);
+            src: url(nth($src, $i)+'.eot');
+            src: url(nth($src, $i)+'.eot?#iefix') format('embedded-opentype'),
+                url(nth($src, $i)+'.woff') format('woff'),
+//                url(nth($src, $i)+'.woff2') format('woff2'),
+//                url(nth($src, $i)+'.svg#svgFontName') format('svg'),
+                url(nth($src, $i)+'.ttf') format('truetype');
+            font-weight: normal;
+	        font-style: normal;
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              sreen-out
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//@include screen-out();
+
+@mixin screen-out(){
+    display:block;
+    width:1px !important;
+    height:1px !important;
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+    text-indent: -9999px;
+    visibility: hidden;
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              모바일 사이즈 %계산
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//만약 psd가 320이라면..
+//width:perWidth(240, 320); (사이즈, 작업하고있는 psd사이즈); 작업psd사이즈가 640이라면 적어주지 않아도된다.
+
+@function perWidth($target, $total:640){
+    @return ($target * 100)/$total + %;
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              size vw단위계산
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//모바일
+//@include vw(m,font-size, 20, 320); (모바일:m pc:w, 사이즈줄 스타일, psd상의 사이즈, 작업하고있는 psd사이즈); 작업psd사이즈가 640이라면 적어주지 않아도된다.
+
+//pc
+//@include vw(w,height, 20, 1920); (모바일:m pc:w, 사이즈줄 스타일, psd상의 사이즈, 작업하고있는 psd사이즈);
+
+@mixin vw($category, $style, $target-size, $total:640){
+    @if #{$category} == 'm'{
+        $ts_half : $target-size/$multyOrhalf;
+    } @else {
+        $ts_half : $target-size;
+    }
+
+    #{$style}:$ts_half+px;
+    #{$style}:vw-size($category, $ts_half, $total);
+}
+
+@function vw-size($category, $target-size, $total){
+    @if #{$category} == 'm'{
+        @return ($target-size * 100)/($total / $multyOrhalf) + vw;
+    } @else {
+        @return ($target-size * 100)/ $total + vw;
+    }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              size rem 단위계산
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//font-size:rem(psd상 폰트사이즈, body(기준)폰트 사이즈)
+@function rem($size, $total:12){
+    @return ($size/$total) + rem;
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              텍스트 말줄임
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+@mixin text-dot(){
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              clearfix
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+@mixin clearfix(){
+    content: '';
+    display:block;
+    clear:both;
+    width:0px;
+    overflow: auto;
+    zoom: 1;
+}
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                    position:absolute 중앙정렬
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//@include positionCenter(50, 40);
+
+@mixin positionCenter($width, $height:auto){
+    @if #{$height} == auto{
+        $ht : auto;
+    } @else {
+        $ht : -($height/$multyOrhalf);
+    }
+    position:absolute;
+    width:$width;
+    height:$height;
+    left:$half_per;
+    top:$half_per;
+    margin-top:$ht;
+    margin-left:-($width/$multyOrhalf);
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                    height = line-height
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//@include h_lh(50);
+@mixin h_lh($val){
+    height:$val + px;
+    line-height:$val + px;
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                    image, text vertical-align:center;
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//@include verticalCenter(50);
+
+@mixin verticalCenter($val){
+    height:$val + px;
+    display:table-cell;
+    vertical-align: middle;
+}
